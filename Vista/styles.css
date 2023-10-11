@@ -1,0 +1,258 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("img/main.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.header {
+  text-align: center;
+  background-color: rgba(75, 30, 5, 0.671);
+  padding: 1px 0;
+  margin-top: 0px;
+  position: relative;
+}
+
+/*----------- LOGO ---------*/
+.header .logo {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+}
+
+@media (max-width: 950px) {
+  .header .logo {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+  }
+}
+/*----------- FIN LOGO ---------*/
+
+/*----- MENU SLIDER --- */ 
+.menu-slider {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 12px 0;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.menu-slider a {
+  color: white;
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 10px 20px;
+  margin: 5px;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.menu-slider a:hover {
+  background-color: white;
+  color: black;
+}
+
+@media (max-width: 850px) {
+  .menu-slider a {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+/*----- FIN ESTILOS MENU SLIDER --- */ 
+
+
+/*----- REDES SOCIALES -----*/
+.social-menu-slider {
+  margin-top: 10px;
+}
+
+@media (max-width: 125px) {
+  .social-menu-slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+}
+/*----- FIN ESTILOS REDES SOCIALES -----*/
+
+/* EFECTO DE CSS PARA SIMULAR MAQUINA DE ESCRIBIR*/
+.ef_typing {
+  margin: 0px auto;
+  width: max-content;
+  border-right: 3px solid;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 2rem;
+  animation: M_escribir 1.9s steps(50);
+  color: white;
+  margin-top: 290px;
+}
+
+@keyframes M_escribir {
+  from {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@media (max-width: 950px) {
+  .ef_typing {
+    font-size: 25px;
+    margin-top: 260px;
+  }
+}
+
+/*----- FIN ESTILOS EFECTO ME----------- */
+section {
+  display: flex;
+  width: auto;
+  height: 500px;
+  margin-top: 0px;
+}
+section img {
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: 0.9;
+  transition: 0.5s ease;
+}
+section img:hover {
+  width: 600px;
+  opacity: 1;
+  filter: contrast(120%);
+}
+
+@media (max-width: 100px) {
+  section img {
+    width: 0%;
+    height: 70%;
+    margin-bottom: 0;
+  }
+}
+
+/* ----------- FOOTER ----------- */
+.copyright-bar {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 5px 0;
+}
+
+.copyright-bar p {
+  margin: 50px;
+}
+
+@media (max-width: 600px) {
+  .copyright-bar p {
+    margin: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  section img:hover {
+    width: 180px;
+
+  }
+}
+/*----- FIN ESTILOS FOOTER ---------- */
+
+
+/* FONDO BLANCO EN TODO EL PROYECTO*/
+.fondo-blanco-transparente {
+  background-color: rgba(255, 255, 255, 0.7); 
+  padding: 20px; 
+}
+/*----- FIN ESTILO BG ------------------*/
+
+
+/* ----- SECCION PARA OP_RESERVAS---- */
+.image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; 
+}
+
+.image-wrapper {
+  margin: 7%;
+  text-align: center;
+}
+
+.image-wrapper img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .image-section {
+      flex-direction: column;
+  }
+
+  .image-wrapper {
+      margin: 10px; 
+  }
+}
+/*----- FIN ESTILOS OP_RESERVAS---------*/
+
+/*------ QUIENES SOMOS-------*/
+.black-rectangle {
+  background: rgba(12, 12, 12, 0.7);
+  padding: 50px;
+  width: 75%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  align-content: center;
+  margin: 0 auto;
+  
+}
+
+@media (max-width: 768px) {
+  .black-rectangle{
+    background: rgba(12, 12, 12, 0.7);
+    padding: 18px;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    align-content: center;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: #fff;
+
+
+  }
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.content p {
+  text-align: justify;
+  font-size: 16px;
+}
+
+
+h2 {
+  font-family: 'Fredoka', sans-serif;
+}
+
+/*------ FIN ESTILO QUIENES SOMOS-------*/
+
+.container1{
+  padding: 8%;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
