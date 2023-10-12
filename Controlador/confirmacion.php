@@ -20,10 +20,10 @@
         </article>       
         
         <div class="social-menu-slider">
-            <a href="https://www.facebook.com/profile.php?viewas=100000686899395&id=61552363406946" class="btn btn-custom"><img src="assets/facebook-icon.svg"/></a>
-            <a href="#" class="btn btn-custom"><img src="assets/twitter-icon.svg"/></a>
-            <a href="https://www.instagram.com/sabor_secreto_peru/" class="btn btn-custom"><img src="assets/instagram-icon.svg"/></a>
-            <a href="#" class="btn btn-custom"><img src="assets/youtube-icon.svg"/></a>
+            <a href="https://www.facebook.com/profile.php?viewas=100000686899395&id=61552363406946" class="btn btn-custom"><img src="/Vista/assets/facebook-icon.svg"/></a>
+            <a href="#" class="btn btn-custom"><img src="/Vista/assets/twitter-icon.svg"/></a>
+            <a href="https://www.instagram.com/sabor_secreto_peru/" class="btn btn-custom"><img src="/Vista/assets/instagram-icon.svg"/></a>
+            <a href="#" class="btn btn-custom"><img src="/Vista/assets/youtube-icon.svg"/></a>
         </div>
         <div class="menu-slider">
             <a href="/Vista/index.html" class="btn btn-outline-custom">Inicio</a>

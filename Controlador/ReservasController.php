@@ -1,31 +1,45 @@
 <?php
-// Incluye el archivo de conexión a la base de datos
-include('../Modelo/conexion.php');
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    require_once "/xampp/htdocs/SABOR_SECRETO/Modelo/conexion.php"; // Ajusta la ruta según tu configuración
 
-// Realiza la consulta SQL para obtener las imágenes
-$sql = "SELECT nombre, ruta_imagen FROM imagenes WHERE categoria = 'vegetariano' LIMIT 3";
-$result = $conn->query($sql);
+    $nom_menu = $_POST["nom_menu"];
+    $cantidad_personas = $_POST["cantidad_personas"];
+    $fecha = $_POST["fecha"];
+    $hora = $_POST["hora"];
+    $metodo_pago = $_POST["medio_pago"];
+    $tipo_comprobante = $_POST["tipo_comprobante"];
+    $dni_ruc = $_POST["ruc_dni"];
+    $nombres_razon_social = $_POST["razon_social"];
+    $direccion = $_POST["direccion"];
 
-// Crea un array para almacenar los resultados
-$imagenes_vegetarianas = array();
-while ($row = $result->fetch_assoc()) {
-    $imagenes_vegetarianas[] = $row;
+    // Preparar la consulta SQL
+    $sql = "INSERT INTO registrar_reserva (nom_menu, n_person, fecha_reserva, reser_hora, medio_pago, tipo_comprobante, ruc_dni, razon_social, direccion) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+    // Preparar la sentencia
+    $stmt = $conn->prepare($sql);
+    if ($stmt) {
+        // Vincular los parámetros
+        $stmt->bind_param("sissssiss", $nom_menu, $cantidad_personas, $fecha, $hora, $metodo_pago, $tipo_comprobante, $dni_ruc, $nombres_razon_social, $direccion);
+
+        // Ejecutar la consulta
+        if ($stmt->execute()) {
+            // Redirige a la página de confirmación con los parámetros que desees
+            header("Location: /Vista/confirmar_pedido.php?nombres=" . urlencode($nombres_razon_social));
+            exit();
+        } else {
+            echo "Error al ejecutar la consulta: " . $stmt->error;
+        }
+
+        // Cierra la sentencia
+        $stmt->close();
+    } else {
+        echo "Error al preparar la consulta: " . $conn->error;
+    }
 }
-
-// Realiza otra consulta para obtener las imágenes de la categoría 'tradicional'
-$sql = "SELECT nombre, ruta_imagen FROM imagenes WHERE categoria = 'tradicional' LIMIT 3";
-$result = $conn->query($sql);
-
-// Crea un array para almacenar los resultados
-$imagenes_tradicionales = array();
-while ($row = $result->fetch_assoc()) {
-    $imagenes_tradicionales[] = $row;
-}
-
-// Incluye la vista HTML
-include('../Vista/reservas_1.php');
-
 ?>
+
+
+
 
 
 
