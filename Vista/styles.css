@@ -171,8 +171,28 @@ section img:hover {
 /* FONDO BLANCO EN TODO EL PROYECTO*/
 .fondo-blanco-transparente {
   background-color: rgba(255, 255, 255, 0.7); 
-  padding: 20px; 
+  padding: 20px;   
 }
+
+.cuadradoblanco {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 45%; 
+  margin: 0 auto; 
+}
+
+@media (max-width: 768px) {
+  .cuadradoblanco{
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 85%; 
+    margin: 0 auto; 
+  }
+}
+
+
 /*----- FIN ESTILO BG ------------------*/
 
 
@@ -256,3 +276,109 @@ h2 {
   border-radius: 10px;
   margin-bottom: 10px;
 }
+
+/* ---- BOTON ENVIAR -----*/
+input[type="submit"] {
+  background-color: #FF5733;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+  background-color: #FF2E00;
+}
+
+form {
+  text-align: center;
+}
+
+.cantidad-personas {
+  margin: 20px;
+}
+
+.cantidad-personas label {
+  margin: 5px;
+}
+
+.TituloCentrado {
+  text-align: center;
+}
+
+
+
+/* Estilos para los radio buttons */
+.cantidad-personas label {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 5px 10px;
+  background-color: #F5F5F5;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.cantidad-personas input[type="radio"] {
+  display: none; /* Oculta el input nativo */
+}
+
+.cantidad-personas label:hover {
+  background-color: #FF5733;
+  color: white;
+}
+
+
+/*---------  POPUP ------ */
+/* Estilos para el popup */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.popup-contenido {
+  background-color: #fff;
+  max-width: 300px;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.popup-contenido p {
+  text-align: center;
+}
+
+.popup-contenido button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.cerrar-popup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+
+
+
+

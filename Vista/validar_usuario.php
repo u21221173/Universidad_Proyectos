@@ -34,35 +34,16 @@
     </div>
     <!------------------------ PLANTILLA ---------------------------------->
     <div class="fondo-blanco-transparente">
-    <div class="container mt-5">
-        
-        <form id="formulario-contacto" action="/Controlador/procesar_formulario.php" method="post">
-            <div class="form-group">
-                <label for="nombre_apellidos">Nombre y Apellidos:</label>
-                <input type="text" class="form-control" id="nombre_apellidos" name="nombre_apellidos" required>
-            </div>
-            <div class="form-group">
-                <label for="correo">Correo:</label>
-                <input type="email" class="form-control" id="correo" name="correo" required>
-            </div>
-            <div class="form-group">
-                <label for="celular">Celular:</label>
-                <input type="text" class="form-control" id="celular" name="celular" required>
-            </div>
-            <div class="form-group">
-                <label for="direccion">Dirección:</label>
-                <input type="text" class="form-control" id="direccion" name="direccion">
-            </div>
-            <div class="form-group">
-                <label for="mensaje">Mensaje:</label>
-                <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
-            </div>
-            <button id="enviar" type="submit" class="btn btn-primary">Enviar</button>
+
+    <h2>BIENVENIDO A NUESTRO RESTAURANTE</h2>
+        <p>Esto nos tomará unos segundos...</p>
+
+        <form action="/Controlador/validar_dni.php" method="post">
+            <label for="dni">Ingrese su DNI:</label>
+            <input type="text" id="dni" name="dni" required>
+            <input type="submit" value="Consultar">
         </form>
     </div>
-    </div>
-    </div>
-    
 
     
 

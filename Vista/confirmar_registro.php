@@ -8,6 +8,15 @@
     <link rel="stylesheet" href="styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
+    <style>
+        body {
+            text-align: center;
+        }
+        h2 {
+            margin-top: 50px;
+        }
+    </style>
+
 </head>
 
 <body>   
@@ -16,7 +25,7 @@
             <img src="img/Icono_Logo.png" alt="Logo" class="logo" />
         </div>
         <article class="ef_typing">
-           CONTÁCTENOS...
+           RESERVAS...
         </article>       
         
         <div class="social-menu-slider">
@@ -33,39 +42,32 @@
         </div>
     </div>
     <!------------------------ PLANTILLA ---------------------------------->
+
     <div class="fondo-blanco-transparente">
-    <div class="container mt-5">
-        
-        <form id="formulario-contacto" action="/Controlador/procesar_formulario.php" method="post">
-            <div class="form-group">
-                <label for="nombre_apellidos">Nombre y Apellidos:</label>
-                <input type="text" class="form-control" id="nombre_apellidos" name="nombre_apellidos" required>
-            </div>
-            <div class="form-group">
-                <label for="correo">Correo:</label>
-                <input type="email" class="form-control" id="correo" name="correo" required>
-            </div>
-            <div class="form-group">
-                <label for="celular">Celular:</label>
-                <input type="text" class="form-control" id="celular" name="celular" required>
-            </div>
-            <div class="form-group">
-                <label for="direccion">Dirección:</label>
-                <input type="text" class="form-control" id="direccion" name="direccion">
-            </div>
-            <div class="form-group">
-                <label for="mensaje">Mensaje:</label>
-                <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
-            </div>
-            <button id="enviar" type="submit" class="btn btn-primary">Enviar</button>
-        </form>
+    <div class="cuadradoblanco">
+    <h2>REGISTRO EXITOSO</h2>    
+    <p>Te damos la bienvenida a nuestra familia de SABOR SECRETO</p>
+
+    <?php
+    if (isset($_GET['nombres'])) {
+        $nombres = $_GET['nombres'];
+        echo "<h2> $nombres</h2>";
+    }
+    ?>
+
+    <img src="/Vista/assets/confirmar.svg" alt="Bienvenido">
+    <p>Esperamos verte en nuestro local como también esperamos atenderte con nuestro delivery.</p>
+    <p>Ahora puedes navegar y hacer tu pedido o reserva como cliente registrado en nuestro sistema.</p>
+
+    <form action="Vista/reservas_1.php" method="post">
+    <div class="TituloCentrado">
+        <input type="submit" value=" < Hacer pedido...!" formaction="/Vista/reservas_1.php">
+    </div>
+    </form>
     </div>
     </div>
-    </div>
-    
 
     
-
     <!------------------------ FIN PLANTILLA ---------------------------------->
     <div class="copyright-bar">
         <p>&copy; 2023 Sabor Secreto. Todos los derechos reservados.</p>

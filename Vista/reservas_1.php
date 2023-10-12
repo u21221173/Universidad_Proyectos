@@ -36,11 +36,22 @@
 
 <!-- Sección de imágenes vegetarianas -->
 <div class="fondo-blanco-transparente">
+
+<?php
+    if (isset($_GET['nombres'])) {
+        $nombres = $_GET['nombres'];
+        echo "<h2>Bienvenido(a): $nombres</h2>";
+    }
+?>
+    
+
 <div class="container mt-5">
     <div class="row">
         <div class="col-md-4 mb-4">
             <div class="card">
-                <img src="/Vista/img/img_Menu/P01.jpg" class="card-img-top" alt="Menu Vegetariano 1">
+                    <a href="registrar_reserva.php?menu=MENU VEGETARIANO 1">
+                        <img src="/Vista/img/img_Menu/P01.jpg" class="card-img-top" alt="Menu Vegetariano 1">
+                    </a>
                 <div class="card-body">
                     <h5 class="card-title">MENU VEGETARIANO 1</h5>
                 </div>
@@ -49,7 +60,9 @@
 
         <div class="col-md-4 mb-4">
             <div class="card">
-                <img src="/Vista/img/img_Menu/P02.jpg" class="card-img-top" alt="Menu Vegetariano 2">
+                    <a href="registrar_reserva.php?menu=MENU VEGETARIANO 2">
+                        <img src="/Vista/img/img_Menu/P02.jpg" class="card-img-top" alt="Menu Vegetariano 2">
+                    </a>
                 <div class="card-body">
                     <h5 class="card-title">MENU VEGETARIANO 2</h5>
                 </div>
@@ -58,7 +71,9 @@
 
         <div class="col-md-4 mb-4">
             <div class="card">
-                <img src="/Vista/img/img_Menu/P03.jpg" class="card-img-top" alt="Menu Vegetariano 3">
+                    <a href="registrar_reserva.php?menu=MENU VEGETARIANO 3">   
+                        <img src="/Vista/img/img_Menu/P03.jpg" class="card-img-top" alt="Menu Vegetariano 3">
+                    </a>
                 <div class="card-body">
                     <h5 class="card-title">MENU VEGETARIANO 3</h5>
                 </div>
@@ -67,7 +82,9 @@
 
         <div class="col-md-4 mb-4">
             <div class="card">
-                <img src="/Vista/img/img_Menu/T01.jpg" class="card-img-top" alt="Menu Tradicional 1">
+                    <a href="registrar_reserva.php?menu=MENU TRADICIONAL 1">
+                        <img src="/Vista/img/img_Menu/T01.jpg" class="card-img-top" alt="Menu Tradicional 1">
+                    </a>
                 <div class="card-body">
                     <h5 class="card-title">MENU TRADICIONAL 1</h5>
                 </div>
@@ -76,7 +93,9 @@
 
         <div class="col-md-4 mb-4">
             <div class="card">
-                <img src="/Vista/img/img_Menu/T02.jpg" class="card-img-top" alt="Menu Tradicional 2">
+                    <a href="registrar_reserva.php?menu=MENU TRADICIONAL 2">
+                        <img src="/Vista/img/img_Menu/T02.jpg" class="card-img-top" alt="Menu Tradicional 2">
+                    </a>
                 <div class="card-body">
                     <h5 class="card-title">MENU TRADICIONAL 2</h5>
                 </div>
@@ -85,7 +104,9 @@
 
         <div class="col-md-4 mb-4">
             <div class="card">
-                <img src="/Vista/img/img_Menu/T03.jpg" class="card-img-top" alt="Menu Tradicional 3">
+                        <a href="registrar_reserva.php?menu=MENU TRADICIONAL 3">
+                            <img src="/Vista/img/img_Menu/T03.jpg" class="card-img-top" alt="Menu Tradicional 3">
+                        </a>
                 <div class="card-body">
                     <h5 class="card-title">MENU TRADICIONAL 3</h5>
                 </div>

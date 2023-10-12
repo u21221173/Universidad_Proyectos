@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+    <script src="/Vista/modal.js"></script>
 </head>
 
 <body>   
@@ -33,16 +33,30 @@
         </div>
     </div>
     <!------------------------ PLANTILLA ---------------------------------->
-<div class="fondo-blanco-transparente">
-    <div class="image-section">     
-        <div class="image-wrapper">
-          <a href="reservas_1.php"><img  src="img/aprobado.png" alt="Reserva"></a>
+
+
+    
+    <div class="fondo-blanco-transparente">
+    <div class="image-section">
+        <div class="image-wrapper">            
+            <a href="#" id="abrirPopup"><img src="img/aprobado.png" alt="Reserva"></a>
         </div>
         <div class="image-wrapper">
-          <a href="cancelar_reserva.php"><img src="img/cancel.png" alt="Cancelar"></a>
+            <a href="registrar_cliente.php"><img src="img/cancel.png" alt="Cancelar"></a>
         </div>
     </div>
-</div>
+    </div>
+
+    <div class="popup" id="miPopup">
+        <div class="popup-contenido">
+            <p>Eres cliente registrado?</p>
+            <button onclick="redirigir('validar_usuario.php')">SI</button>
+            <button onclick="redirigir('registrar_cliente.php')">NO</button>
+            <span class="cerrar-popup" id="cerrarPopup">&times;</span>
+        </div>
+    </div>
+
+
 
 
 
@@ -50,6 +64,6 @@
     <div class="copyright-bar">
         <p>&copy; 2023 Sabor Secreto. Todos los derechos reservados.</p>
     </div>   
-
+    <script src="/Vista/modal.js"></script>
 </body>
 </html>
